@@ -1,0 +1,36 @@
+<head>
+	<link rel="stylesheet" href="css/home.css" />
+</head>
+<div class="container">
+	<table class="table" ng-controller="employeesCtrl"  data-ng-init="employeesCtrl.init()" >
+		<thead>
+			<div align="right">
+				<button class="btn btn-primary" ng-click="employeesCtrl.add()">Add Employee</button>
+			</div>
+			<tr>
+				<th ng-click="sortField='empNo'; reverse = !reverse">Employee Id</th>
+				<th ng-click="sortField='firstName'; reverse = !reverse">First Name</th>
+				<th ng-click="sortField='lastName'; reverse = !reverse">Last Name</th>
+				<th ng-click="sortField='address'; reverse = !reverse">Address</th>
+				<th ng-click="sortField='contactNo'; reverse = !reverse">Contact No</th>
+				<th ng-click="sortField='gender'; reverse = !reverse">Gender</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="Employee in Employees | filter:search | orderBy:sortField:!reverse" ng-model='Employee'>
+				<td ng-bind="Employee.empNo" align="center"></td>
+				<td ng-bind="Employee.firstName"></td>
+				<td ng-bind="Employee.lastName"></td>
+				<td ng-bind="Employee.address"></td>
+				<td ng-bind="Employee.contactNo"></td>
+				<td ng-bind="Employee.gender"></td>
+				<td class="actions">
+					<button class="btn btn-danger" ng-click="employeesCtrl.remove( Employee._id )">remove</button>
+					<button class="btn btn-primary" ng-click="employeesCtrl.update()">update</button>
+					<button class="btn btn-info" ng-click="employeesCtrl.info( Employee._id )">info</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

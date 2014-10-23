@@ -1,0 +1,76 @@
+<head>
+	<link rel="stylesheet" href="css/home.css" />
+</head>
+<div class="container">
+	<div class="container-body" ng-controller="addEmpController">
+		<div class="container-header">
+			<h4 class="container-title">Add Employee</h4>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 ae-row">
+				<div class="col field-group">
+					<div class="col-xs-1">Employee#:</div>
+					<div class="col-xs-2"><input class="form-control" ng-model="addEmpController.Employee.empNo" placeholder="Employee Id" required></div>
+				</div>
+			</div>
+			<div class="col-xs-12 ae-row">
+				<div class="col field-group">
+					<div class="col-xs-1 text-field-right">FirstName:</div>
+					<div class="col-xs-4"><input class="form-control" ng-model="addEmpController.Employee.firstName" placeholder="Firstname" required></div>
+				</div>
+			</div>
+			<div class="col-xs-12 ae-row">
+				<div class="col field-group">
+					<div class="col-xs-1 text-field-right">LastName:</div>
+					<div class="col-xs-4"><input class="form-control" ng-model="addEmpController.Employee.lastName" placeholder="Lastname" required></div>
+				</div>
+			</div>
+			<div class="col-xs-12 ae-row">
+				<div class="col field-group">
+					<div class="col-xs-1 text-field-right">DateofBirth:</div>
+					<div class="col-xs-2" align="center"><input type="date" ng-model="addEmpController.Employee.dateofbirth" placeholder="Date of Birth" required></div>
+				</div>
+				<div class="col field-group">
+					<div class="col-xs-1 text-field-right">Gender:</div>
+					<div class="col-xs-2"><input class="form-control" ng-model="addEmpController.Employee.gender" placeholder="Gender"></div>
+				</div>
+			</div>
+			<div class="col-xs-12 ae-row">
+				<div class="col field-group">
+					<div class="col-xs-1 text-field-right">Address:</div>
+					<div class="col-xs-5"><input class="form-control" ng-model="addEmpController.Employee.address" placeholder="Address"></div>
+				</div>
+			</div>
+			<div class="col-xs-12 ae-row">
+				<div class="col field-group">
+					<div class="col-xs-1 text-field-right">Contact No:</div>
+					<div class="col-xs-2"><input class="form-control" ng-model="addEmpController.Employee.contactNo" placeholder="Contactno"></div>
+				</div>
+			</div>
+			<div class="col-xs-12 ae-row">
+				<div class="col field-group">
+					<div class="col-xs-1 text-field-right">SSS:</div>
+					<div class="col-xs-2"><input class="form-control" ng-model="addEmpController.Employee.sssno" placeholder="SSS No"></div>
+				</div>
+			</div>
+			<div class="col-xs-12 ae-row">
+				<div class="col field-group">
+					<div class="col-xs-1 text-field-right">HDMF:</div>
+					<div class="col-xs-2"><input class="form-control" ng-model="addEmpController.Employee.hdmf" placeholder="Pag-ibig No"></div>
+				</div>
+			</div>
+			<div class="col-xs-12 ae-row">
+				<div class="col field-group">
+					<div class="col-xs-1 text-field-right">TIN:</div>
+					<div class="col-xs-2"><input class="form-control" ng-model="addEmpController.Employee.tin" placeholder="Tax Identification No"></div>
+				</div>
+			</div>
+		</div>
+		<div class="container-footer">
+			<div class="add-emp">
+				<button class="btn btn-default" ng-click="addEmpController.cancel()">Cancel</button>
+				<button class="btn btn-primary" ng-click="addEmpController.create()">Add Employee</button>
+			</div>
+		</div>
+	</div>
+</div>

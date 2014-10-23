@@ -1,0 +1,9 @@
+{
+	"name"        : "hr-application",
+	"description" : "A simple application",
+	"version"     : "0.0.1",
+
+   "dependencies": {
+      "mongodb-wrapper": "0.4.x"
+    }
+}

@@ -1,0 +1,27 @@
+/*.header-menu {
+	border-bottom : 1px solid #ddd;
+}*/
+
+.container-body {
+	display          : block;
+	width            : 1000px;
+	margin           : 0 auto;
+}
+
+.actions {
+	text-align : center;
+}
+
+.ae-row {
+	margin-bottom : 14px;
+	display       : inline-block;
+}
+
+.add-emp {
+	padding-left : 300px;
+}
+
+.footer {
+	text-align  : center;
+	padding-top : 250px;
+}

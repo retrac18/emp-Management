@@ -1,0 +1,59 @@
+<!doctype html>
+<html ng-app="hrApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HR Monitoring</title>
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/home.css" />
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    </head>
+    <body>
+		<div class="container">
+			<div id="nav-menu" class="header-menu">
+				<div class="content-header col-xs-5 col-md-4">
+		    		<h2>Employee Management</h2>
+				</div>
+				<div class="clear"></div>
+				<ul class="nav nav-tabs col-xs-7 col-md-8" role="tablist">
+				    <li class="contact pull-right">
+				    	<a href="/#/Contactus" role="tab" data-toggle="tab">Contact</a>
+				    </li>
+				    <li class="about pull-right">
+				    	<a href="/#/Aboutus" role="tab" data-toggle="tab">About</a>
+				    </li>
+				    <li class="home pull-right">
+				    	<a href="/#/Employees" role="tab" data-toggle="tab">Home</a>
+				    </li>
+				</ul>
+			</div>
+			<div id="clear"></div>
+		</div>
+    	<div ng-view></div>
+
+    	<div class="footer">
+    		<footer>Copyright 2014<br>All Rights Reserved<br></footer>
+    	</div>
+
+    	<script src="lib/angular.js"></script>
+        <script src="lib/angular-route.js"></script>
+    	<script src="js/app.js"></script>
+    	<script src="js/directives/loginDirective.js"></script>
+    	<script src="js/directives/empDirective.js"></script>
+    	<script src="js/directives/aboutDirective.js"></script>
+    	<script src="js/directives/contactDirective.js"></script>
+    	<script src="js/directives/addEmpDirective.js"></script>
+    	<script src="js/directives/empProfileDirective.js"></script>
+    	<script src="js/controllers/loginController.js"></script>
+    	<script src="js/controllers/empController.js"></script>
+    	<script src="js/controllers/aboutController.js"></script>
+    	<script src="js/controllers/contactController.js"></script>
+    	<script src="js/controllers/addEmpController.js"></script>
+    	<script src="js/controllers/empProfileController.js"></script>
+    	<script src="js/services/loginService.js"></script>
+
+    </body>
+</html>
