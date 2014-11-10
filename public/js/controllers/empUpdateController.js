@@ -1,9 +1,8 @@
 'use strict';
 
-var hrApp = angular.module( 'hrApp.empProfileController', [] );
+var hrApp = angular.module( 'hrApp.empUpdateController',[] );
 
-hrApp.controller( 'empProfileController', function( $scope, $http, $location, $routeParams ) {
-
+hrApp.controller( 'empUpdateController', function( $scope, $http, $location, $routeParams ) {
 	var self = this;
 
 	self.renderEmployee = function () {
@@ -20,6 +19,13 @@ hrApp.controller( 'empProfileController', function( $scope, $http, $location, $r
 		return $http.get( '/Employees/' + $routeParams.id )
 		.success( function ( response ) {
 			$scope.Employee = response;
+		} );
+	};
+
+	self.updateEmployee = function () {
+		$http.put( '/Employees/' + $scope.Employee._id, $scope.Employee )
+		.success( function () {
+			$location.path( '/Employees' );
 		} );
 	};
 

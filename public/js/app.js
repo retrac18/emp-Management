@@ -7,7 +7,8 @@ var app = angular.module( 'hrApp',
 		  'hrApp.aboutController',
 		  'hrApp.contactController',
 		  'hrApp.addEmpController',
-		  'hrApp.empProfileController' ] );
+		  'hrApp.empProfileController',
+		  'hrApp.empUpdateController' ] );
 
 app.config( [ '$routeProvider',	 function( $routeProvider ) {
 	$routeProvider
@@ -41,7 +42,12 @@ app.config( [ '$routeProvider',	 function( $routeProvider ) {
 			controller   : 'empProfileController',
 			controllerAs : 'empProfileController'
 		} )
+		.when( '/EmpUpdate/:id', {
+			templateUrl  : 'partials/tpl/empUpdate.tpl.html',
+			controller   : 'empUpdateController',
+			controllerAs : 'empUpdateController'
+		} )
 		.otherwise( {
-			redirectTo : '/'
+			redirectTo : '/Employees'
 		} );
 } ] );

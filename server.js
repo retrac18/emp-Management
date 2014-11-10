@@ -4,33 +4,32 @@ var express    = require( 'express' );
 var app        = express();
 var bodyParser = require( 'body-parser' );
 var mongojs    = require( 'mongojs' );
-var db         = mongojs( 'employeedb', ['Employees', 'Users']);
-// var favicon    = require( 'serve-favicon' );
+var db         = mongojs( 'employeedb', [ 'Employees', 'Users' ]);
 
 app.use( express.static( __dirname + '/public' ) );
 app.use( bodyParser() );
 
-app.get('/Aboutus', function( req, res) {
+app.get( '/Aboutus', function( req, res ) {
 	console.log('aboutus!');
 } );
 
-app.get('/Contactus', function( req, res) {
+app.get( '/Contactus', function( req, res ) {
 	console.log('aboutus!');
 } );
 
-app.get('/Employees', function( req, res) {
+app.get( '/Employees', function( req, res ) {
 	db.Employees.find( function ( err, docs ) {
 		res.json( docs );
 	} );
 } );
 
-app.post('/Employees', function( req, res) {
-	db.Employees.insert( req.body, function( err, doc) {
+app.post( '/Employees', function( req, res ) {
+	db.Employees.insert( req.body, function( err, doc ) {
 		res.json( doc );
 	} );
 } );
 
-app.delete('/Employees/:id', function( req, res) {
+app.delete( '/Employees/:id', function( req, res ) {
 	var id = req.params.id;
 	db.Employees.remove( { _id : mongojs.ObjectId( id ) },
 		function ( err, doc ) {
@@ -78,7 +77,7 @@ app.get( '/Users/:user', function( req, res ) {
 	);
 } );
 
-app.get('/Users', function( req, res) {
+app.get( '/Users', function( req, res ) {
 	db.Users.find( function ( err, docs ) {
 		res.json( docs );
 	} );

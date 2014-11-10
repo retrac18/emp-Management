@@ -1,0 +1,76 @@
+<head>
+	<link rel="stylesheet" href="css/home.css" />
+</head>
+<div class="container">
+	<div class="container-body" ng-controller="empUpdateController" data-ng-init="empUpdateController.init()">
+		<div class="container-header">
+			<h4 class="container-title">Update Employee</h4>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 ae-row">
+				<div class="col field-group">
+					<div class="col-xs-1">Employee#:</div>
+					<div class="col-xs-2"><input class="form-control" ng-model="Employee.empNo"></div>
+				</div>
+			</div>
+			<div class="col-xs-12 ae-row">
+				<div class="col field-group">
+					<div class="col-xs-1 text-field-right">FirstName:</div>
+					<div class="col-xs-4"><input class="form-control" ng-model="Employee.firstName" required></div>
+				</div>
+			</div>
+			<div class="col-xs-12 ae-row">
+				<div class="col field-group">
+					<div class="col-xs-1 text-field-right">LastName:</div>
+					<div class="col-xs-4"><input class="form-control" ng-model="Employee.lastName" required></div>
+				</div>
+			</div>
+			<div class="col-xs-12 ae-row">
+				<div class="col field-group">
+					<div class="col-xs-1 text-field-right">DateofBirth:</div>
+					<div class="col-xs-2" align="center"><input type="date" ng-model="Employee.dateofbirth" required></div>
+				</div>
+				<div class="col field-group">
+					<div class="col-xs-1 text-field-right">Gender:</div>
+					<div class="col-xs-2"><input class="form-control" ng-model="Employee.gender" ></div>
+				</div>
+			</div>
+			<div class="col-xs-12 ae-row">
+				<div class="col field-group">
+					<div class="col-xs-1 text-field-right">Address:</div>
+					<div class="col-xs-5"><input class="form-control" ng-model="Employee.address" ></div>
+				</div>
+			</div>
+			<div class="col-xs-12 ae-row">
+				<div class="col field-group">
+					<div class="col-xs-1 text-field-right">Contact No:</div>
+					<div class="col-xs-2"><input class="form-control" ng-model="Employee.contactNo" ></div>
+				</div>
+			</div>
+			<div class="col-xs-12 ae-row">
+				<div class="col field-group">
+					<div class="col-xs-1 text-field-right">SSS:</div>
+					<div class="col-xs-2"><input class="form-control" ng-model="Employee.sssno" ></div>
+				</div>
+			</div>
+			<div class="col-xs-12 ae-row">
+				<div class="col field-group">
+					<div class="col-xs-1 text-field-right">HDMF:</div>
+					<div class="col-xs-2"><input class="form-control" ng-model="Employee.hdmf" ></div>
+				</div>
+			</div>
+			<div class="col-xs-12 ae-row">
+				<div class="col field-group">
+					<div class="col-xs-1 text-field-right">TIN:</div>
+					<div class="col-xs-2"><input class="form-control" ng-model="Employee.tin" ></div>
+				</div>
+			</div>
+		</div>
+		<div class="container-footer">
+			<div class="add-emp">
+				<button class="btn btn-default" ng-click="empUpdateController.cancel()">Cancel</button>
+				<button class="btn btn-primary" ng-click="empUpdateController.updateEmployee( Employee._id )">Update Employee</button>
+			</div>
+		</div>
+	</div>
+</div>

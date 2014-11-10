@@ -1,12 +1,12 @@
 'use strict';
 
-var hrApp = angular.module( 'hrApp.employeesCtrl',[] );
+var hrApp = angular.module( 'hrApp.employeesCtrl', [] );
 
 hrApp.controller( 'employeesCtrl', function( $scope, $http, $location ) {
 	var self = this;
 
 	self.renderEmployees = function () {
-		$scope.getEmployeeDB().then( function( response ){
+		$scope.getEmployeeDB().then( function( response ) {
 			$scope.Employees = response.data;
 		});
 	};
@@ -34,12 +34,10 @@ hrApp.controller( 'employeesCtrl', function( $scope, $http, $location ) {
 		$location.path( '/EmpProfile/' + id );
 	};
 
-	self.update = function () {
-		$http.put( '/Employees/' + $scope.Employee._id, $scope.Employee )
-		.success( function () {
-			self.init();
-		} );
+	self.update = function ( id ) {
+		$location.path( '/EmpUpdate/' + id );
 	};
+
 	$scope.sortField = 'lastName';
 	$scope.reverse   = true;
 } );
