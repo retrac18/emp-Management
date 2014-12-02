@@ -2,7 +2,6 @@
 
 var app = angular.module( 'hrApp',
 		[ 'ngRoute',
-		  'hrApp.loginController',
 		  'hrApp.employeesCtrl',
 		  'hrApp.aboutController',
 		  'hrApp.contactController',
@@ -13,9 +12,9 @@ var app = angular.module( 'hrApp',
 app.config( [ '$routeProvider',	 function( $routeProvider ) {
 	$routeProvider
 		.when( '/', {
-			templateUrl  : 'partials/tpl/login.tpl.html',
-			controller   : 'loginController',
-			controllerAs : 'logincontroller'
+			templateUrl  : 'partials/tpl/employee.tpl.html',
+			controller   : 'employeesCtrl',
+			controllerAs : 'employeesCtrl'
 		} )
 		.when( '/Employees', {
 			templateUrl  : 'partials/tpl/employee.tpl.html',
@@ -37,15 +36,20 @@ app.config( [ '$routeProvider',	 function( $routeProvider ) {
 			controller   : 'addEmpController',
 			controllerAs : 'addEmpController'
 		} )
-		.when( '/EmpProfile/:id', {
+		.when( '/ViewProfile/:id', {
 			templateUrl  : 'partials/tpl/empDetails.tpl.html',
 			controller   : 'empProfileController',
 			controllerAs : 'empProfileController'
 		} )
-		.when( '/EmpUpdate/:id', {
+		.when( '/Update/:id', {
 			templateUrl  : 'partials/tpl/empUpdate.tpl.html',
 			controller   : 'empUpdateController',
 			controllerAs : 'empUpdateController'
+		} )
+		.when( '/DTRView/:id', {
+			templateUrl  : 'partials/tpl/dtrView.tpl.html',
+			controller   : 'empDTRController',
+			controllerAs : 'empDTRController'
 		} )
 		.otherwise( {
 			redirectTo : '/Employees'

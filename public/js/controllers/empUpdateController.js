@@ -25,11 +25,11 @@ hrApp.controller( 'empUpdateController', function( $scope, $http, $location, $ro
 	self.updateEmployee = function () {
 		$http.put( '/Employees/' + $scope.Employee._id, $scope.Employee )
 		.success( function () {
-			$location.path( '/Employees' );
+			$location.path( '/' );
 		} );
 	};
 
 	self.cancel = function () {
-		$location.path( '/Employees' );
+		$location.path( '/' );
 	};
 } );

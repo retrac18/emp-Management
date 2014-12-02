@@ -31,11 +31,15 @@ hrApp.controller( 'employeesCtrl', function( $scope, $http, $location ) {
 	};
 
 	this.info = function ( id ) {
-		$location.path( '/EmpProfile/' + id );
+		$location.path( '/ViewProfile/' + id );
 	};
 
 	self.update = function ( id ) {
-		$location.path( '/EmpUpdate/' + id );
+		$location.path( '/Update/' + id );
+	};
+
+	this.dtr = function ( id ) {
+		$location.path( '/DTRView/' + id );
 	};
 
 	$scope.sortField = 'lastName';

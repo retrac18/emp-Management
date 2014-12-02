@@ -7,11 +7,11 @@ hrApp.controller( 'addEmpController', function( $scope, $http, $location ) {
 	this.create = function () {
 		$http.post( '/Employees', this.Employee )
 		.success( function () {
-			$location.path( '/Employees' );
+			$location.path( '/' );
 		} );
 	};
 
 	this.cancel = function () {
-		$location.path( '/Employees' );
+		$location.path( '/' );
 	};
 } );

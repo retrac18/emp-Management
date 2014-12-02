@@ -24,6 +24,6 @@ hrApp.controller( 'empProfileController', function( $scope, $http, $location, $r
 	};
 
 	self.cancel = function () {
-		$location.path( '/Employees' );
+		$location.path( '/' );
 	};
 } );
