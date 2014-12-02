@@ -14,7 +14,8 @@
 
 .ae-row {
 	margin-bottom : 14px;
-	display       : inline-block;
+	/*display     : inline-block;*/
+	float         : right;
 }
 
 .add-emp {
@@ -24,4 +25,18 @@
 .footer {
 	text-align  : center;
 	padding-top : 250px;
+}
+
+.container-image {
+	float  : left;
+	width  : 500px;
+	height : 500px;
+}
+
+.close-prof {
+	margin : 400px ;
+}
+
+.profile-content {
+	margin-top : 50px;
 }

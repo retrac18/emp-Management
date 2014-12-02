@@ -6,70 +6,69 @@
 		<div class="container-header">
 			<h4 class="container-title">Employee Profile</h4>
 		</div>
-		<div class="row">
-			<div class="col-xs-12 ae-row">
+			<img src="images/doflamingo.jpg" alt="Profile_pic" class="container-image" >
+		<div class="row profile-content">
+			<div class="col-xs-6 ae-row">
 				<div class="col field-group">
 					<div class="col-xs-2">Employee#:</div>
 					<div class="col-xs-2" ng-bind="Employee.empNo"></div>
 				</div>
 			</div>
-			<div class="col-xs-12 ae-row">
+			<div class="col-xs-6 ae-row">
 				<div class="col field-group">
 					<div class="col-xs-2 text-field-right">FirstName:</div>
 					<div class="col-xs-4" ng-bind="Employee.firstName"></div>
 				</div>
 			</div>
-			<div class="col-xs-12 ae-row">
+			<div class="col-xs-6 ae-row">
 				<div class="col field-group">
 					<div class="col-xs-2 text-field-right">LastName:</div>
 					<div class="col-xs-4" ng-bind="Employee.lastName"></div>
 				</div>
 			</div>
-			<div class="col-xs-12 ae-row">
+			<div class="col-xs-6 ae-row">
 				<div class="col field-group">
 					<div class="col-xs-2 text-field-right">DateofBirth:</div>
-					<div class="col-xs-2" ng-bind="Employee.dateofbirth"></div>
+					<div class="col-xs-4" ng-bind="Employee.dateofbirth"></div>
 				</div>
 			</div>
-			<div class="col-xs-12 ae-row">
+			<div class="col-xs-6 ae-row">
 				<div class="col field-group">
 					<div class="col-xs-2 text-field-right">Gender:</div>
-					<div class="col-xs-2" ng-bind="Employee.gender"></div>
+					<div class="col-xs-4" ng-bind="Employee.gender"></div>
 				</div>
 			</div>
-			<div class="col-xs-12 ae-row">
+			<div class="col-xs-6 ae-row">
 				<div class="col field-group">
 					<div class="col-xs-2 text-field-right">Address:</div>
 					<div class="col-xs-5" ng-bind="Employee.address"></div>
 				</div>
 			</div>
-			<div class="col-xs-12 ae-row">
+			<div class="col-xs-6 ae-row">
 				<div class="col field-group">
 					<div class="col-xs-2 text-field-right">Contact No:</div>
 					<div class="col-xs-5" ng-bind="Employee.contactNo"></div>
 				</div>
 			</div>
-			<div class="col-xs-12 ae-row">
+			<div class="col-xs-6 ae-row">
 				<div class="col field-group">
 					<div class="col-xs-2 text-field-right">SSS:</div>
-					<div class="col-xs-2" ng-bind="Employee.sssno"></div>
+					<div class="col-xs-4" ng-bind="Employee.sssno"></div>
 				</div>
 			</div>
-			<div class="col-xs-12 ae-row">
+			<div class="col-xs-6 ae-row">
 				<div class="col field-group">
 					<div class="col-xs-2 text-field-right">HDMF:</div>
-					<div class="col-xs-2" ng-bind="Employee.hdmf"></div>
+					<div class="col-xs-4" ng-bind="Employee.hdmf"></div>
 				</div>
 			</div>
-			<div class="col-xs-12 ae-row">
+			<div class="col-xs-6 ae-row">
 				<div class="col field-group">
 					<div class="col-xs-2 text-field-right">TIN:</div>
-					<div class="col-xs-2" ng-bind="Employee.tin"></div>
+					<div class="col-xs-4" ng-bind="Employee.tin"></div>
 				</div>
 			</div>
-		</div>
-		<div class="container-footer">
-			<div class="add-emp">
+			<div class="close-prof">
 				<button class="btn btn-default" ng-click="empProfileController.cancel()">Close</button>
 			</div>
 		</div>
